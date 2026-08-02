@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "insertchat",
-      "displayName": "InsertChat",
+      "displayName": "InsertChat: AI Chatbot & Knowledge Base Builder",
       "source": "./",
       "description": "Set up and inspect InsertChat AI assistants, add confirmed website sources, and monitor source training through the hosted InsertChat MCP server.",
       "author": {

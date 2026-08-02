@@ -1,4 +1,4 @@
-# InsertChat for Claude
+# InsertChat: AI Chatbot & Knowledge Base Builder
 
 The official Claude plugin for [InsertChat](https://insertchat.com). It connects Claude to InsertChat's hosted MCP server so you can inspect assistants, check setup, add a confirmed website source, monitor source training, and open assistant settings.
 
