@@ -1,0 +1,18 @@
+{
+  "name": "insertchat",
+  "description": "Set up and inspect InsertChat AI assistants, add confirmed website sources, and monitor source training through the hosted InsertChat MCP server.",
+  "version": "1.0.0",
+  "author": {
+    "name": "MindCrafters LLC"
+  },
+  "homepage": "https://insertchat.com",
+  "repository": "https://github.com/InsertChat/claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "insertchat",
+    "mcp",
+    "ai-assistant",
+    "knowledge-base",
+    "customer-support"
+  ]
+}
