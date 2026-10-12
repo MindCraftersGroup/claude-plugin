@@ -1,58 +1,71 @@
-# InsertChat: AI Chatbot & Knowledge Base Builder
+# InsertChat - AI Receptionist
 
-The official Claude plugin for [InsertChat](https://insertchat.com). It connects Claude to InsertChat's hosted MCP server so you can inspect assistants, check setup, add a confirmed website source, monitor source training, and open assistant settings.
+The official Claude plugin for [InsertChat](https://insertchat.com), the AI receptionist, AI phone agent, and AI chatbot for growing businesses. InsertChat answers phone calls, website chats, WhatsApp, email, and SMS with your business knowledge, captures leads, and hands conversations to your team in one shared inbox.
 
-## Install
-
-After approval in the Claude community marketplace:
-
-```text
-/plugin marketplace add anthropics/claude-plugins-community
-/plugin install insertchat@claude-community
-```
-
-Until then, install directly from this repository:
-
-```text
-/plugin marketplace add InsertChat/claude-plugin
-/plugin install insertchat@insertchat-plugins
-```
-
-Start a new Claude Code session, open `/mcp`, and sign in to your InsertChat account when prompted.
+This plugin connects Claude to InsertChat's hosted MCP server and adds four guided skills, so you can run your front desk from Claude in chat, Cowork, and Claude Code.
 
 ## What Claude can do
 
-- List assistants in the connected InsertChat app.
-- Check assistant setup and integration status.
-- Add a website source after you confirm the exact assistant and URL.
-- Monitor website-source training status.
-- Return a safe deep link to assistant settings for actions outside the focused MCP surface.
+- **See what needs you:** a front desk brief across your assistants with urgent, unassigned, waiting, and needs-you conversations.
+- **Review calls and chats:** search and read AI receptionist calls and AI chatbot conversations, then get summaries, callback briefs, and reply drafts that you send yourself.
+- **Look up leads:** find contacts and read their submitted inquiries (owners and admins).
+- **Track results:** monthly conversation, resolution, contact, satisfaction, and credit reports (requires analytics access).
+- **Train your assistant:** check setup and knowledge training status, and add one web page (FAQ, services, opening hours) as knowledge after you confirm the assistant and URL.
 
-The plugin does not expose delete, credential, billing, message-sending, or publishing tools.
+## Skills
+
+| Skill | Use it for |
+| --- | --- |
+| `get-started` | Confirm the connection and pick a first task |
+| `ai-front-desk` | Front desk briefing, inbox triage, lead follow-up, monthly performance |
+| `ai-receptionist` | AI receptionist call reviews and callback briefs |
+| `ai-website-assistant` | Website chat knowledge gaps, training checks, adding a page |
+
+## Install
+
+From Claude: open **Customize > Plugins**, search for InsertChat, and add it once it is listed in Anthropic's directory.
+
+In Claude Code, from this repository:
+
+```text
+/plugin marketplace add MindCraftersGroup/claude-plugin
+/plugin install insertchat@insertchat-plugins
+```
+
+Then run `/mcp`, select `insertchat`, and sign in to your InsertChat account.
 
 ## Example prompts
 
 ```text
-List my InsertChat assistants.
-Check the setup status of my assistant.
-Add https://example.com/docs as a source after confirming the assistant and URL with me.
-Show the latest source training status.
-Open this assistant's settings.
+Show the calls and chats my AI receptionist needs me to handle.
+Summarize my latest unassigned website chat and draft a reply.
+Find my newest lead and tell me what they asked for.
+How did my AI receptionist and chatbot perform this month?
+Is my assistant fully set up, and has it finished training?
+Train my assistant on https://example.com/faq.
 ```
 
 ## Requirements
 
-- An [InsertChat](https://app.insertchat.com) account with access to an app and assistant.
-- Claude Code with plugin support.
+- An [InsertChat](https://app.insertchat.com) account with access to a workspace and at least one assistant.
+- Contacts require an owner or admin role; reports also require analytics access.
 - Browser access to complete InsertChat OAuth sign-in.
 
-## Security and privacy
+## What the plugin connects to and sends
 
-Authentication uses OAuth with PKCE. Access is scoped to the InsertChat app selected during authorization. See the [privacy policy](https://insertchat.com/privacy), [terms](https://insertchat.com/terms), and [security overview](https://insertchat.com/security).
+The plugin contains no executable code. It declares one remote MCP server, `https://api.insertchat.com/v2/mcp`, operated by MindCrafters LLC. Claude sends tool requests (assistant IDs, search queries, filters, and URLs you ask to import) to that server and receives data from your InsertChat workspace. Nothing is sent anywhere else.
+
+Sign-in uses OAuth 2.0 with PKCE and is scoped to the workspace you choose during authorization. The plugin requests these scopes: `insertchat:apps:read`, `insertchat:agents:read`, `insertchat:sources:read`, `insertchat:sources:write`, `insertchat:inbox:read`, `insertchat:contacts:read`, and `insertchat:reports:read`. Clients that ignore the requested scope list receive the server default, which adds `insertchat:workspace:open` (workspace links and InsertChat display preferences).
+
+The only write tool is `add_source_url`: it imports one web page as knowledge and uses one credit and one source slot. Every other tool is read-only. The plugin cannot delete data, send customer messages, place calls, book appointments, change phone routing, manage credentials or billing, or publish assistants. Reply drafts stay in Claude until you send them yourself in InsertChat.
+
+## Privacy and security
+
+See the [privacy policy](https://insertchat.com/privacy), [terms](https://insertchat.com/terms), and [security overview](https://insertchat.com/security). You can disconnect at any time by removing the plugin or clearing its authentication in Claude.
 
 ## Support
 
-Use [InsertChat support](https://insertchat.com/contact) for installation or account help.
+Contact [InsertChat support](https://insertchat.com/contact) or support@insertchat.com.
 
 ## License
 

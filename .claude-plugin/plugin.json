@@ -1,18 +1,30 @@
 {
   "name": "insertchat",
-  "description": "Set up and inspect InsertChat AI assistants, add confirmed website sources, and monitor source training through the hosted InsertChat MCP server.",
-  "version": "1.0.0",
+  "displayName": "InsertChat - AI Receptionist",
+  "description": "Run your InsertChat AI receptionist and AI chatbot from Claude: see the calls and chats that need you, prepare callback briefs and reply drafts, look up leads, review reports, and train your assistant on your website.",
+  "version": "1.1.0",
   "author": {
-    "name": "MindCrafters LLC"
+    "name": "MindCrafters LLC",
+    "email": "support@insertchat.com",
+    "url": "https://insertchat.com"
   },
   "homepage": "https://insertchat.com",
-  "repository": "https://github.com/InsertChat/claude-plugin",
+  "repository": "https://github.com/MindCraftersGroup/claude-plugin",
   "license": "MIT",
   "keywords": [
     "insertchat",
-    "mcp",
-    "ai-assistant",
+    "ai-receptionist",
+    "ai-chatbot",
+    "ai-phone-agent",
+    "website-chatbot",
+    "shared-inbox",
+    "lead-capture",
     "knowledge-base",
     "customer-support"
-  ]
+  ],
+  "icon": "./assets/logo.png",
+  "documentationUrl": "https://github.com/MindCraftersGroup/claude-plugin#readme",
+  "supportUrl": "https://insertchat.com/contact",
+  "privacyPolicyUrl": "https://insertchat.com/privacy",
+  "termsOfServiceUrl": "https://insertchat.com/terms"
 }

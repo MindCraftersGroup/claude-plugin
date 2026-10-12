@@ -4,7 +4,7 @@
       "type": "http",
       "url": "https://api.insertchat.com/v2/mcp",
       "oauth": {
-        "scopes": "insertchat:apps:read insertchat:agents:read insertchat:sources:read insertchat:sources:write"
+        "scopes": "insertchat:apps:read insertchat:agents:read insertchat:sources:read insertchat:sources:write insertchat:inbox:read insertchat:contacts:read insertchat:reports:read"
       }
     }
   }
