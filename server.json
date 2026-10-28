@@ -1,0 +1,29 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "com.insertchat/insertchat",
+  "title": "InsertChat - AI Receptionist",
+  "description": "AI receptionist and AI chatbot: inbox triage, reply drafts, leads, reports, and knowledge training.",
+  "version": "2.1.0",
+  "websiteUrl": "https://insertchat.com",
+  "repository": {
+    "url": "https://github.com/MindCraftersGroup/claude-plugin",
+    "source": "github"
+  },
+  "icons": [
+    {
+      "src": "https://api.insertchat.com/v2/mcp/icon.svg",
+      "mimeType": "image/svg+xml"
+    },
+    {
+      "src": "https://raw.githubusercontent.com/MindCraftersGroup/claude-plugin/main/assets/logo.png",
+      "mimeType": "image/png",
+      "sizes": ["359x359"]
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.insertchat.com/v2/mcp"
+    }
+  ]
+}
