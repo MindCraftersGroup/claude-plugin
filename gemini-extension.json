@@ -1,0 +1,10 @@
+{
+  "name": "insertchat",
+  "version": "1.1.0",
+  "description": "Run your InsertChat AI receptionist and AI chatbot from Gemini CLI: see the calls and chats that need you, draft replies, look up leads, review reports, and train your assistant on your website.",
+  "mcpServers": {
+    "insertchat": {
+      "httpUrl": "https://api.insertchat.com/v2/mcp"
+    }
+  }
+}

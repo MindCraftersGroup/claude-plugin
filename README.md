@@ -34,6 +34,16 @@ In Claude Code, from this repository:
 
 Then run `/mcp`, select `insertchat`, and sign in to your InsertChat account.
 
+### Other clients
+
+The same repository works as a Cursor plugin (`.cursor-plugin/plugin.json` + `mcp.json`) and a Gemini CLI extension (`gemini-extension.json`):
+
+```text
+gemini extensions install https://github.com/MindCraftersGroup/claude-plugin
+```
+
+Any MCP client can connect directly to `https://api.insertchat.com/v2/mcp` (Streamable HTTP, OAuth). The server is published in the official MCP Registry as `com.insertchat/insertchat`.
+
 ## Example prompts
 
 ```text

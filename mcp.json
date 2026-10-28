@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "insertchat": {
+      "url": "https://api.insertchat.com/v2/mcp"
+    }
+  }
+}
