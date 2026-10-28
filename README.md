@@ -8,9 +8,11 @@ This plugin connects Claude to InsertChat's hosted MCP server and adds four guid
 
 - **See what needs you:** a front desk brief across your assistants with urgent, unassigned, waiting, and needs-you conversations.
 - **Review calls and chats:** search and read AI receptionist calls and AI chatbot conversations, then get summaries, callback briefs, and reply drafts that you send yourself.
-- **Look up leads:** find contacts and read their submitted inquiries (owners and admins).
+- **Look up leads:** find contacts, read their submitted inquiries, and open related conversations (owners and admins).
 - **Track results:** monthly conversation, resolution, contact, satisfaction, and credit reports (requires analytics access).
-- **Train your assistant:** check setup and knowledge training status, and add one web page (FAQ, services, opening hours) as knowledge after you confirm the assistant and URL.
+- **Train your assistant:** check knowledge sources and training status, spot the questions customers ask, and add one web page (FAQ, services, opening hours) as knowledge after you confirm the assistant and URL.
+
+Adding a URL imports one page, uses one credit and one source slot, and does not crawl the website. Setup and training checks do not verify every channel or prove a phone line or website widget is live.
 
 ## Skills
 
@@ -52,7 +54,7 @@ Summarize my latest unassigned website chat and draft a reply.
 Find my newest lead and tell me what they asked for.
 How did my AI receptionist and chatbot perform this month?
 Is my assistant fully set up, and has it finished training?
-Train my assistant on https://example.com/faq.
+Train my AI chatbot on my website's FAQ page: https://example.com/faq.
 ```
 
 ## Requirements

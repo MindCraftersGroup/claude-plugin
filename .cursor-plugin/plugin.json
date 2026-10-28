@@ -2,7 +2,7 @@
   "name": "insertchat",
   "displayName": "InsertChat - AI Receptionist",
   "description": "Run your InsertChat AI receptionist and AI chatbot from Cursor: see the calls and chats that need you, prepare callback briefs and reply drafts, look up leads, review reports, and train your assistant on your website.",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": {
     "name": "MindCrafters LLC",
     "email": "support@insertchat.com",
